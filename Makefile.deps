@@ -4,6 +4,8 @@ AIEPSEVG.o: AIEPSEVG.cc Player.hh Info.hh Settings.hh Structs.hh Utils.hh \
  State.hh Action.hh Random.hh Registry.hh
 AIEPSEVGv2.o: AIEPSEVGv2.cc Player.hh Info.hh Settings.hh Structs.hh \
  Utils.hh State.hh Action.hh Random.hh Registry.hh
+AIEPSEVGv3.o: AIEPSEVGv3.cc Player.hh Info.hh Settings.hh Structs.hh \
+ Utils.hh State.hh Action.hh Random.hh Registry.hh
 AINull.o: AINull.cc Player.hh Info.hh Settings.hh Structs.hh Utils.hh \
  State.hh Action.hh Random.hh Registry.hh
 Action.o: Action.cc Action.hh Structs.hh Utils.hh

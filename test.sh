@@ -19,7 +19,7 @@ for ((i=0; $i < $TEST_SIZE; i++))
 do
 	r=$RANDOM
 	let "r %= 4"
-	./Game ${n[$r]} ${n[((($r+1)%4))]} ${n[((($r+2)%4))]} ${n[((($r+3)%4))]} -s $i -i default.cnf -o default.res 2> out.err
+	./Game ${n[$r]} ${n[((($r+1)%4))]} ${n[((($r+2)%4))]} ${n[((($r+3)%4))]} -s $RANDOM -i default.cnf -o default.res 2> out.err
 	if grep -c "$1 got top score" out.err
 	then
 		let "count1+=1"
@@ -47,10 +47,9 @@ do
 	else 
 		let "count4+=0"
 	fi
-	rm out.err
 	echo "game $i completed"
 done
-rm win1.line win2.line win3.line win4.line
+rm out.err win1.line win2.line win3.line win4.line
 echo "Resultados:"
 echo "  $1: $count1"
 echo "  $2: $count2"
